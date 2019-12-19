@@ -1,5 +1,5 @@
 module.exports = {
-  "logo": "",
+  "logo": "https://ecs7.tokopedia.net/assets-seru-frontend/master/img/logo-b0ceebca9543b2da51c42d65485c78f6.png",
   "carousel": [
     {
       "url": "https://ecs7.tokopedia.net/img/banner/2019/12/18/77927732/77927732_1af4050a-a288-4a9c-8416-b8091be33377.jpg",
