@@ -15,12 +15,23 @@ app.get('/api/home', (req, res) => {
 });
 
 app.get('/api/product', (req, res) => {
-  const page = req.query.page
+  const page = parseInt(req.query.page) || 1
   const startIndex = (page - 1) * 10
   const endIndex = page * 10
-  const productList = products.slice(startIndex, endIndex)
+  const productList = {}
+
+  if(endIndex < products.length) {
+    productList.nextPage = page + 1
+  }
+
+  if(startIndex > 0) {
+    productList.previousPage = page - 1
+  }
+  productList.data = products.slice(startIndex, endIndex)
   res.json(productList)
 });
+
+
 
 
 app.listen(5000, function () {
