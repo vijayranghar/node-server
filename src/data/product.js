@@ -1,43 +1,43 @@
 module.exports = [{
 		"img": "https://ecs7.tokopedia.net/img/cache/200-square/product-1/2019/6/12/2570456/2570456_90794ecf-e3f4-4896-b466-efe108372d5a_720_720.jpg.webp",
 		"name": "Product 1",
-		"price": "1000",
+		"price": "3222",
 		"id": 1
 	},
 	{
 		"img": "https://ecs7.tokopedia.net/img/cache/200-square/product-1/2019/11/6/5723707/5723707_6ffc1993-cbc3-45d1-8b24-3619c9d39803_1280_1280.webp",
 		"name": "Product 2",
-		"price": "1100",
+		"price": "2221",
 		"id": 2
 	},
 	{
 		"img": "https://ecs7.tokopedia.net/img/cache/200-square/product-1/2019/10/22/12590409/12590409_0285b3d3-ab8f-41ca-806c-ff2290ca0f96_700_700.webp",
 		"name": "Product 3",
-		"price": "1200",
+		"price": "1232",
 		"id": 3
 	},
 	{
 		"img": "https://ecs7.tokopedia.net/img/cache/200-square/product-1/2019/10/23/290238/290238_7e65adb0-c425-4558-bf2f-ea876cc43c5d_640_640.jpg.webp",
 		"name": "Product 4",
-		"price": "1300",
+		"price": "423",
 		"id": 4
 	},
 	{
 		"img": "https://ecs7.tokopedia.net/img/cache/200-square/product-1/2019/11/27/6041270/6041270_46edf22c-7ac5-4b01-b166-ca9dbd3444be_869_869.jpg.webp",
 		"name": "Product 5",
-		"price": "1400",
+		"price": "1420",
 		"id": 5
 	},
 	{
 		"img": "https://ecs7.tokopedia.net/img/cache/200-square/attachment/2019/11/6/157302369912918/157302369912918_6fbb518f-f0fc-4241-96d3-1dca699f4c15.png.webp",
 		"name": "Product 6",
-		"price": "1500",
+		"price": "1670",
 		"id": 6
 	},
 	{
 		"img": "https://ecs7.tokopedia.net/img/cache/200-square/product-1/2019/6/12/2570456/2570456_90794ecf-e3f4-4896-b466-efe108372d5a_720_720.jpg.webp",
 		"name": "Product 7",
-		"price": "1600",
+		"price": "989",
 		"id": 7
 	},
 	{

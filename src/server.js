@@ -1,6 +1,7 @@
 const express = require('express');
-const data = require('./data/home.json')
+const homepageInfo = require('./data/homepageInfo.js')
 const products = require('./data/product.js')
+const description = require('./data/productDescription')
 
 const app = express();
 
@@ -11,22 +12,34 @@ app.use((req, res, next) => {
   });
 
 app.get('/api/home', (req, res) => {
-    res.json(data)
+    res.json(homepageInfo)
 });
 
-app.get('/api/product', (req, res) => {
-  const page = parseInt(req.query.page) || 1
-  const startIndex = (page - 1) * 10
-  const endIndex = page * 10
+app.get('/api/products/:id', (req, res) => {
+  const id = req.params.id
+  const name = `Product ${id}`
+  const rating = Math.floor(Math.random()*5) + 1
+  const price = `Rs ${Math.floor(Math.random()*3000) + 100}`
+  const productDescription = {...description, id, rating, price, name}
+  res.json(productDescription)
+})
+
+app.get('/api/products', (req, res) => {
+  const pageId = parseInt(req.query.page) || 1
+  const startIndex = (pageId - 1) * 10
+  const endIndex = pageId * 10
   const productList = {}
 
-  if(endIndex < products.length) {
-    productList.nextPage = page + 1
+  if ((endIndex > 0) && (endIndex < products.length)) {
+    productList.nextPage = pageId + 1
+  } else {
+    productList.nextPage = 2
   }
 
-  if(startIndex > 0) {
-    productList.previousPage = page - 1
+  if ((startIndex > 0) && (startIndex < products.length)) {
+    productList.previousPage = pageId - 1
   }
+
   productList.data = products.slice(startIndex, endIndex)
   res.json(productList)
 });
@@ -34,6 +47,6 @@ app.get('/api/product', (req, res) => {
 
 
 
-app.listen(5000, function () {
+app.listen(process.env.PORT || 5000, function () {
     console.log('Dev app listening on port 5000!');
 });
